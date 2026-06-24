@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicanor Rodrigues Filho — Mentor de Carreira</title>
+  <meta name="description" content="Mentor de carreira especializado em profissionais 40/50+. Soberania de Carreira e #AEstratégia — clareza prática para quem tem bagagem e precisa de eixo." />
+  <meta name="author" content="Nicanor Rodrigues Filho" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nicanor Rodrigues Filho — Mentor de Carreira" />
+  <meta property="og:description" content="200+ profissionais orientados. 80+ recolocações. 40+ anos de mercado real convertidos em clareza prática." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ────────────────────────────────────── */
+    :root {
+      --black:   #0D0D0D;
+      --charcoal:#1A1A1A;
+      --cream:   #F5F0E8;
+      --parchment:#EDE6D6;
+      --gold:    #C9A84C;
+      --gold-dim:#9E7E35;
+      --white:   #FDFAF4;
+
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans:  'Inter', system-ui, sans-serif;
+
+      --max: 860px;
+      --gap: clamp(2rem, 5vw, 4rem);
+    }
+
+    /* ── RESET ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: clamp(15px, 2vw, 17px);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { color: var(--cream); }
+
+    /* ── RULE ORNAMENT ─────────────────────────────── */
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-block: 2.5rem;
+    }
+    .rule::before, .rule::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--gold-dim);
+      opacity: .4;
+    }
+    .rule-diamond {
+      width: 7px; height: 7px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ── LAYOUT ────────────────────────────────────── */
+    .container {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+    }
+
+    /* ── NAV ───────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(13,13,13,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201,168,76,.15);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: .95rem;
+      letter-spacing: .08em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: .7;
+      transition: opacity .2s;
+    }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+
+    @media (max-width: 560px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── HERO ──────────────────────────────────────── */
+    #hero {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding-top: 56px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle vertical lines background */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(201,168,76,.04) 79px,
+        rgba(201,168,76,.04) 80px
+      );
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      text-align: center;
+      padding-block: var(--gap);
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--white);
+      letter-spacing: -.01em;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-tagline {
+      margin-top: 1.75rem;
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--parchment);
+      opacity: .8;
+      max-width: 540px;
+      margin-inline: auto;
+    }
+
+    /* Signature divider */
+    .hero-sig {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+    }
+    .hero-sig-line {
+      width: 48px; height: 1px;
+      background: var(--gold);
+      opacity: .5;
+    }
+    .hero-sig-text {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: .9rem;
+      color: var(--gold);
+      letter-spacing: .04em;
+    }
+
+    .hero-cta {
+      margin-top: 2.75rem;
+      display: inline-block;
+      padding: .8rem 2.2rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      transition: background .25s, color .25s;
+    }
+    .hero-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    /* ── STATS ─────────────────────────────────────── */
+    #numeros {
+      background: var(--charcoal);
+      border-top: 1px solid rgba(201,168,76,.12);
+      border-bottom: 1px solid rgba(201,168,76,.12);
+      padding-block: clamp(2.5rem, 6vw, 4rem);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      margin-top: .5rem;
+      font-size: .72rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: .6;
+    }
+
+    /* ── SECTIONS ──────────────────────────────────── */
+    section { padding-block: clamp(3rem, 8vw, 6rem); }
+
+    .section-eyebrow {
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .75rem;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .body-text {
+      color: var(--cream);
+      opacity: .82;
+      max-width: 640px;
+    }
+    .body-text p + p { margin-top: 1rem; }
+
+    /* ── SOBRE ─────────────────────────────────────── */
+    #sobre .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 640px) {
+      #sobre .sobre-grid { grid-template-columns: 1fr; }
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-left: 1.25rem;
+      border-left: 1px solid rgba(201,168,76,.25);
+    }
+    .timeline-item {}
+    .timeline-year {
+      font-size: .68rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .2rem;
+    }
+    .timeline-desc {
+      font-size: .9rem;
+      color: var(--cream);
+      opacity: .75;
+    }
+
+    /* ── CONCEITOS ─────────────────────────────────── */
+    #conceitos { background: var(--charcoal); }
+
+    .conceitos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 600px) {
+      .conceitos-grid { grid-template-columns: 1fr; }
+    }
+
+    .conceito-card {
+      border: 1px solid rgba(201,168,76,.2);
+      padding: 2rem;
+      position: relative;
+      transition: border-color .3s;
+    }
+    .conceito-card:hover { border-color: var(--gold); }
+
+    .conceito-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--gold);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .conceito-card:hover::before { opacity: 1; }
+
+    .conceito-label {
+      font-size: .65rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .75rem;
+    }
+    .conceito-name {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--white);
+      margin-bottom: .75rem;
+      line-height: 1.25;
+    }
+    .conceito-desc {
+      font-size: .88rem;
+      color: var(--cream);
+      opacity: .75;
+      line-height: 1.65;
+    }
+
+    /* ── BLOG ──────────────────────────────────────── */
+    #blog {}
+
+    .posts-list {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .post-item {
+      display: grid;
+      grid-template-columns: 5rem 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      padding-block: 1.75rem;
+      border-bottom: 1px solid rgba(201,168,76,.1);
+      transition: background .2s;
+    }
+    .post-item:first-child { border-top: 1px solid rgba(201,168,76,.1); }
+
+    .post-date {
+      font-size: .68rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: .7;
+      padding-top: .2rem;
+    }
+    .post-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: .35rem;
+      line-height: 1.3;
+    }
+    .post-excerpt {
+      font-size: .85rem;
+      color: var(--cream);
+      opacity: .65;
+      line-height: 1.6;
+    }
+    .post-link {
+      display: inline-block;
+      margin-top: .6rem;
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid rgba(201,168,76,.3);
+      padding-bottom: 1px;
+    }
+    .post-link:hover { border-color: var(--gold); }
+
+    .blog-cta-wrap {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+
+    /* ── CONTATO ───────────────────────────────────── */
+    #contato {
+      background: var(--charcoal);
+      text-align: center;
+    }
+    #contato .section-title { margin-inline: auto; }
+    #contato .body-text { margin-inline: auto; text-align: center; }
+
+    .contact-links {
+      margin-top: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .contact-btn {
+      display: inline-block;
+      padding: .75rem 2rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: .76rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      transition: background .25s, color .25s;
+    }
+    .contact-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+    .contact-btn.secondary {
+      border-color: rgba(201,168,76,.35);
+      color: var(--cream);
+      opacity: .7;
+    }
+    .contact-btn.secondary:hover {
+      background: transparent;
+      border-color: var(--gold);
+      color: var(--gold);
+      opacity: 1;
+    }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    footer {
+      padding-block: 2.5rem;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,.1);
+    }
+    .footer-name {
+      font-family: var(--serif);
+      font-size: .9rem;
+      color: var(--gold);
+      letter-spacing: .06em;
+      margin-bottom: .4rem;
+    }
+    .footer-copy {
+      font-size: .72rem;
+      color: var(--cream);
+      opacity: .35;
+      letter-spacing: .08em;
+    }
+
+    /* ── SCROLL REVEAL ─────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-brand">NRF</span>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#conceitos">Conceitos</a></li>
+        <li><a href="#blog">Escritos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Mentor de Carreira &amp; Vida — São Paulo, Brasil</p>
+      <h1 class="hero-name">
+        Você tem bagagem.<br>
+        <em>Falta eixo.</em>
+      </h1>
+      <p class="hero-tagline">
+        40 anos de mercado real — TI, gestão, imobiliário e transformação digital —
+        convertidos em clareza prática para quem precisa de direção, não de slogan.
+      </p>
+      <div class="hero-sig">
+        <span class="hero-sig-line"></span>
+        <span class="hero-sig-text">Nicanor Rodrigues Filho</span>
+        <span class="hero-sig-line"></span>
+      </div>
+      <a href="#contato" class="hero-cta">Fale comigo</a>
+    </div>
+  </section>
+
+  <!-- NÚMEROS -->
+  <div id="numeros">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="reveal">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Profissionais orientados</div>
+        </div>
+        <div class="reveal">
+          <div class="stat-number">80+</div>
+          <div class="stat-label">Recolocações concluídas</div>
+        </div>
+        <div class="reveal">
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Anos de mercado real</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="reveal">
+          <p class="section-eyebrow">Trajetória</p>
+          <h2 class="section-title">Mercado real.<br><em>Sem atalhos.</em></h2>
+          <div class="body-text">
+            <p>
+              Uma jornada que começa nos anos 80 na eletrônica, atravessa toda a revolução
+              da informática, passa pelo mercado imobiliário de alto padrão, pelo
+              e-commerce e chega à mentoria de carreira — não como reposicionamento
+              de currículo, mas como consequência natural de quem viveu o mercado
+              de dentro.
+            </p>
+            <p>
+              Não vendo promessas. Entrego clareza prática, baseada em vivência.
+            </p>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">1982 — 1995</div>
+              <div class="timeline-desc">Eletrônica e telecomunicações — Escola Técnica Federal de São Paulo</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">1995 — 2012</div>
+              <div class="timeline-desc">TI, Redes e Infraestrutura — evolução junto com o mercado digital</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2012 — 2020</div>
+              <div class="timeline-desc">Corretagem imobiliária de alto padrão e e-commerce</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2024 — hoje</div>
+              <div class="timeline-desc">Mentoria de carreira — 200+ profissionais, 80+ recolocações</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEITOS -->
+  <section id="conceitos">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Pensamento proprietário</p>
+        <h2 class="section-title">Os conceitos que<br><em>orientam o trabalho.</em></h2>
+      </div>
+      <div class="conceitos-grid">
+        <div class="conceito-card reveal">
+          <div class="conceito-label">Conceito central</div>
+          <div class="conceito-name">Soberania<br>de Carreira</div>
+          <p class="conceito-desc">
+            A transição do profissional que depende de um emprego para o profissional
+            que detém o controle estratégico da própria trajetória — independentemente
+            do regime de trabalho. Não é sobre ser autônomo. É sobre ter eixo.
+          </p>
+        </div>
+        <div class="conceito-card reveal">
+          <div class="conceito-label">Framework</div>
+          <div class="conceito-name">#AEstratégia</div>
+          <p class="conceito-desc">
+            O método aplicado na mentoria: diagnóstico real, posicionamento preciso
+            e movimento intencional. Sem fórmulas genéricas. Cada profissional tem
+            uma equação própria — e ela precisa ser decifrada, não copiada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Escritos</p>
+        <h2 class="section-title">Reflexões sobre<br><em>carreira e mercado.</em></h2>
+      </div>
+      <div class="posts-list">
+        <div class="post-item reveal">
+          <div class="post-date">Jun 2026</div>
+          <div>
+            <div class="post-title">O mercado que descarta experiência como lixo corporativo</div>
+            <p class="post-excerpt">
+              Se você tem mais de 50 anos, currículo impecável e ainda acredita que o mercado
+              valoriza experiência — precisamos conversar.
+            </p>
+            <a href="https://nicanorrodriguesfilho.wordpress.com" target="_blank" class="post-link">Ler no blog →</a>
+          </div>
+        </div>
+        <div class="post-item reveal">
+          <div class="post-date">Mai 2026</div>
+          <div>
+            <div class="post-title">A diferença entre ter emprego e ter soberania</div>
+            <p class="post-excerpt">
+              Segurança de carreira não mora no contracheque. Mora na capacidade de
+              gerar valor independentemente de quem assina sua carteira.
+            </p>
+            <a href="https://nicanorrodriguesfilho.wordpress.com" target="_blank" class="post-link">Ler no blog →</a>
+          </div>
+        </div>
+        <div class="post-item reveal">
+          <div class="post-date">Abr 2026</div>
+          <div>
+            <div class="post-title">Turismo Profissional Estratégico: quando mudar de área não é fuga</div>
+            <p class="post-excerpt">
+              Existe uma forma de transição que não é desespero — é movimento calculado.
+              A distinção importa mais do que a maioria dos mentores admite.
+            </p>
+            <a href="https://nicanorrodriguesfilho.wordpress.com" target="_blank" class="post-link">Ler no blog →</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-cta-wrap reveal">
+        <a href="https://nicanorrodriguesfilho.wordpress.com" target="_blank" class="contact-btn">
+          Ver todos os escritos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-eyebrow">Próximo passo</p>
+        <h2 class="section-title">Pronto para<br><em>ter eixo?</em></h2>
+        <div class="body-text">
+          <p>
+            Atendo profissionais em todos os estágios — do primeiro emprego sério
+            ao profissional sênior que quer mais da própria carreira.
+            A conversa começa pelo diagnóstico.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:nicanorf@gmail.com" class="contact-btn">Enviar e-mail</a>
+          <a href="http://www.linkedin.com/in/nickrodriguesoc" target="_blank" class="contact-btn secondary">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-name">Nicanor Rodrigues Filho</div>
+      <div class="footer-copy">© 2026 — Mentor de Carreira &amp; Vida — São Paulo, Brasil</div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger siblings
+          const siblings = [...entry.target.parentElement.querySelectorAll('.reveal')];
+          const idx = siblings.indexOf(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, idx * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
