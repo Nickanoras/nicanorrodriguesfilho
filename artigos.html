@@ -3,314 +3,336 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Artigos Soberania de Carreira</title>
-  <meta name="description" content="Curadoria de artigos sobre Soberania de Carreira publicados no LinkedIn por Nicanor Rodrigues Filho. Conceitos do método #AEstratégia.">
+  <title>Artigos — Nicanor Rodrigues Filho</title>
+  <meta name="description" content="Artigos publicados no LinkedIn que fundamentam o método #AEstratégia de Soberania de Carreira.">
   <meta property="og:title" content="Artigos — Soberania de Carreira">
-  <meta property="og:description" content="Leia os artigos que fundamentam o método #AEstratégia de Soberania de Carreira">
+  <meta property="og:description" content="Leia os textos que estruturam o método #AEstratégia">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://nickanoras.github.io/nicanorrodriguesfilho/artigos.html">
-  <meta property="og:image" content="https://nickanoras.github.io/nicanorrodriguesfilho/assets/img/artigos-hero.jpg">
   <link rel="canonical" href="https://nickanoras.github.io/nicanorrodriguesfilho/artigos.html">
 
   <style>
     :root {
-      --primary: #2563eb;    /* azul LinkedIn */
+      --primary: #2563eb;
       --primary-dark: #1e40af;
-      --gray-50: #f9fafb;
-      --gray-100: #f3f4f6;
-      --gray-300: #d1d5db;
       --gray-700: #374151;
       --gray-900: #111827;
-      --radius: 16px;
-      --shadow: 0 4px 32px 0 rgba(30,64,175,0.08);
-      --font-base: 'Inter', 'Segoe UI', Arial, sans-serif;
+      --background: #f9fafb;
+      --surface: #fff;
+      --font: 'Inter', 'Segoe UI', Arial, sans-serif;
+      --heading-line: 3px solid var(--primary);
     }
 
     body {
-      font-family: var(--font-base);
-      background: var(--gray-50);
+      background: var(--background);
       color: var(--gray-900);
+      font-family: var(--font);
       margin: 0;
       min-height: 100vh;
-      padding: 0 0 4rem 0;
+      padding: 0 0 3.5rem 0;
     }
 
-    .container {
-      max-width: 900px;
+    .main-container {
+      max-width: 700px;
       margin: 2.5rem auto;
-      padding: 2rem;
+      padding: 2rem 1.2rem;
+      background: var(--surface);
+      border-radius: 18px;
+      box-shadow: 0 8px 40px 0 rgba(37,99,235,0.06);
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
+    .page-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.03em;
+      margin-bottom: 0.3rem;
+      line-height: 1.15;
     }
 
     .subtitle {
       display: inline-block;
       background: var(--primary);
-      color: white;
-      padding: 0.25rem 1rem;
+      color: #fff;
+      padding: 0.18rem 1.1rem;
       border-radius: 999px;
       font-size: 0.95rem;
       font-weight: 600;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.2rem;
+      margin-top: 0.5rem;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin: 0.25rem 0 0.5rem 0;
-      color: var(--primary-dark);
-      letter-spacing: -0.03em;
-    }
-
-    .description {
+    .page-description {
       color: var(--gray-700);
-      font-size: 1.15rem;
-      max-width: 520px;
-      margin: 0 auto 1.5rem auto;
+      font-size: 1.12rem;
+      line-height: 1.6;
+      margin-bottom: 2.2rem;
       text-align: center;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .article-card {
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 1.75rem 1.25rem;
-      transition: transform 0.18s, box-shadow 0.18s;
-      border: 1px solid var(--gray-100);
+    .articles-list {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      min-height: 240px;
+      gap: 2.2rem;
     }
 
-    .article-card:hover {
-      transform: translateY(-6px) scale(1.018);
-      box-shadow: 0 8px 40px 0 rgba(30,64,175,0.13);
-      border-color: var(--primary);
-      cursor: pointer;
+    .article-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .article-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.15rem;
     }
 
     .article-title {
-      font-size: 1.2rem;
+      font-size: 1.28rem;
       font-weight: 700;
       color: var(--primary-dark);
-      margin-bottom: 0.6rem;
-      line-height: 1.35;
+      letter-spacing: -0.01em;
       transition: color 0.18s;
+      line-height: 1.3;
     }
 
-    .article-card:hover .article-title {
+    .article-title:hover {
       color: var(--primary);
+      text-decoration: underline;
     }
 
-    .article-link {
+    .linkedin-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
+      gap: 0.35rem;
       text-decoration: none;
       color: var(--primary);
       font-weight: 500;
       font-size: 0.98rem;
-      margin-top: 0.25rem;
       transition: color 0.18s;
+      margin-left: 0.1rem;
+      padding-left: 2.1rem;
+      position: relative;
     }
 
-    .article-link:hover {
+    .linkedin-link:hover {
       color: var(--primary-dark);
       text-decoration: underline;
     }
 
-    .linkedin-icon {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
-      background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m0 2h.01M10 17v-7m0 0V7m0 3h3m-3 0h-3m6 0v-3m0 3h.01m-.01 0h-.01\" stroke=\"%232563eb\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>') no-repeat center/contain;
-      filter: drop-shadow(0 2px 8px rgba(37,99,235,0.08));
+    .linkedin-link::before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m0 2h.01\" stroke=\"%232563eb\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"8\" cy=\"8\" r=\"2\" fill=\"%232563eb\"/><path d=\"M12 17v-5m0-2h4m-4 0h-4m0 5h4\" stroke=\"%232563eb\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>') no-repeat center/contain;
     }
 
     .article-summary {
       color: var(--gray-700);
-      font-size: 1.02rem;
-      line-height: 1.55;
-      margin-bottom: 0.8rem;
-      flex: 1;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      margin-left: 2.1rem;
+      margin-top: 0.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.4rem;
+      margin-left: 2.1rem;
+      margin-top: 0.1rem;
+      margin-bottom: 0.6rem;
     }
 
     .tag {
-      display: inline-block;
-      background: var(--gray-100);
+      background: #f3f4f6;
       color: var(--primary-dark);
-      padding: 0.15rem 0.7rem;
+      padding: 0.14rem 0.7rem;
       border-radius: 8px;
       font-size: 0.85rem;
       font-weight: 500;
-      margin-top: 0.2rem;
-      margin-right: 0.3rem;
+    }
+
+    /* Heading underline line */
+    .heading-underline {
+      width: 48px;
+      height: 3px;
+      background: var(--primary);
+      margin: 0.8rem 0 1.5rem 0;
+      border-radius: 2px;
     }
 
     @media (max-width: 600px) {
-      .container {
+      .main-container {
         padding: 0.7rem;
+        border-radius: 8px;
       }
-      header {
+      .page-title {
+        font-size: 1.4rem;
+      }
+      .page-description {
+        font-size: 1rem;
         margin-bottom: 1.2rem;
       }
-      .articles-grid {
-        gap: 1rem;
+      .article-title {
+        font-size: 1.06rem;
       }
-      .article-card {
-        padding: 1.1rem 0.7rem;
-        min-height: 180px;
+      .article-summary {
+        font-size: 0.98rem;
+        margin-left: 1.4rem;
       }
-      h1 {
-        font-size: 1.6rem;
+      .linkedin-link {
+        padding-left: 1.4rem;
+        font-size: 0.92rem;
+      }
+      .tags {
+        margin-left: 1.4rem;
       }
     }
   </style>
 
-  <!-- Optional: Google Fonts for subtle upgrade -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
+  <div class="main-container">
 
-    <header>
+    <div>
       <span class="subtitle">#AEstratégia</span>
-      <h1>Artigos de Soberania de Carreira</h1>
-      <div class="description">
-        Curadoria dos textos que fundamentam o método. Cada artigo é um passo no caminho de transformar experiência acumulada em <strong>capital profissional próprio</strong>.
+      <div class="page-title">Artigos de Soberania de Carreira</div>
+      <div class="heading-underline"></div>
+      <div class="page-description">
+        A sequência lógica do método. Cada artigo é um degrau no caminho de transformar experiência acumulada em <strong>capital profissional próprio</strong>.<br>
+        Leia na ordem ou vá direto ao tema que precisa resolver <em>agora</em>.
       </div>
-    </header>
+    </div>
 
-    <section class="articles-grid">
+    <div class="articles-list">
 
       <!-- Artigo 1 -->
-      <article class="article-card">
-        <div>
+      <div class="article-item">
+        <div class="article-heading">
           <div class="article-title">O CÓDIGO DA SOBERANIA: Transformando a CLT em opção</div>
-          <div class="article-summary">
-            Desvenda como a experiência de décadas no mercado formal pode ser traduzida em um sistema de autonomia — onde o emprego CLT deixa de ser necessidade e vira <em>escolha estratégica</em>. O artigo apresenta o framework mental que antecede qualquer mudança prática.
-          </div>
         </div>
-        <a class="article-link" href="https://www.linkedin.com/pulse/o-c%25C3%25B3digo-da-soberania-transformando-clt-em-op%25C3%25A7%25C3%25A3o-rodrigues-filho-vytsf" target="_blank" rel="noopener">
-          <span class="linkedin-icon"></span>
+        <a class="linkedin-link" href="https://www.linkedin.com/pulse/o-c%25C3%25B3digo-da-soberania-transformando-clt-em-op%25C3%25A7%25C3%25A3o-rodrigues-filho-vytsf" target="_blank" rel="noopener">
           Ler no LinkedIn
         </a>
-        <div>
+        <div class="article-summary">
+          Desvenda como a experiência de décadas no mercado formal pode ser traduzida em um sistema de autonomia — onde o emprego CLT deixa de ser necessidade e vira escolha estratégica. O ponto de partida para quem sente que "tem bagagem, mas falta eixo".
+        </div>
+        <div class="tags">
           <span class="tag">Fundamento</span>
           <span class="tag">CLT → Soberania</span>
         </div>
-      </article>
+      </div>
 
       <!-- Artigo 2 -->
-      <article class="article-card">
-        <div>
+      <div class="article-item">
+        <div class="article-heading">
           <div class="article-title">FUTURO DO TRABALHO — Passando de tendência a Realidade</div>
-          <div class="article-summary">
-            Analisa como as megatendências (IA generativa, trabalho remoto, economia de plataformas) deixaram de ser "futuro" e se tornaram o <em>presente operacional</em> de qualquer carreira. O artigo mostra como profissionais soberanos se posicionam antes da curva — não reagem a ela.
-          </div>
         </div>
-        <a class="article-link" href="https://www.linkedin.com/pulse/futuro-do-trabalho-passando-de-tend%25C3%25AAncia-realidade-rodrigues-filho-d4jcf" target="_blank" rel="noopener">
-          <span class="linkedin-icon"></span>
+        <a class="linkedin-link" href="https://www.linkedin.com/pulse/futuro-do-trabalho-passando-de-tend%25C3%25AAncia-realidade-rodrigues-filho-d4jcf" target="_blank" rel="noopener">
           Ler no LinkedIn
         </a>
-        <div>
-          <span class="tag">Tendências</span>
-          <span class="tag">Futuro do Trabalho</span>
+        <div class="article-summary">
+          As megatendências (IA, trabalho remoto, plataformas) deixaram de ser "futuro" e se tornaram o presente operacional de qualquer carreira. O artigo mostra como profissionais soberanos se posicionam antes da curva — não reagem a ela.
         </div>
-      </article>
+        <div class="tags">
+          <span class="tag">Tendências</span>
+          <span class="tag">IA e Trabalho</span>
+        </div>
+      </div>
 
       <!-- Artigo 3 -->
-      <article class="article-card">
-        <div>
+      <div class="article-item">
+        <div class="article-heading">
           <div class="article-title">"Soberania de Carreira" — O que é exatamente</div>
-          <div class="article-summary">
-            A definição canônica do conceito. Explica a diferença entre <em>soberania</em> e <em>independência</em>, entre <em>autonomia</em> e <em>autossuficiência</em>. É o artigo-guia para quem precisa explicar o método #AEstratégia em uma conversa.
-          </div>
         </div>
-        <a class="article-link" href="https://www.linkedin.com/pulse/soberania-de-carreira-o-que-%25C3%25A9-exatamente-nicanor-rodrigues-filho-wb7kf" target="_blank" rel="noopener">
-          <span class="linkedin-icon"></span>
+        <a class="linkedin-link" href="https://www.linkedin.com/pulse/soberania-de-carreira-o-que-%25C3%25A9-exatamente-nicanor-rodrigues-filho-wb7kf" target="_blank" rel="noopener">
           Ler no LinkedIn
         </a>
-        <div>
+        <div class="article-summary">
+          A definição canônica do conceito. Explica a diferença entre soberania e independência, entre autonomia e autossuficiência. É o artigo-guia para quem precisa explicar o método #AEstratégia em uma conversa.
+        </div>
+        <div class="tags">
           <span class="tag">Conceito-chave</span>
           <span class="tag">#Soberania</span>
         </div>
-      </article>
+      </div>
 
       <!-- Artigo 4 -->
-      <article class="article-card">
-        <div>
+      <div class="article-item">
+        <div class="article-heading">
           <div class="article-title">Pilares de uma Carreira sempre em Ascensão</div>
-          <div class="article-summary">
-            Mapeia os 4 pilares que sustentam uma trajetória resiliente em qualquer mercado: <em>repertório</em>, <em>rede</em>, <em>relevância</em> e <em>recorrência</em>. O artigo funciona como checklist prático para autoavaliação trimestral.
-          </div>
         </div>
-        <a class="article-link" href="https://www.linkedin.com/pulse/pilares-de-uma-carreira-sempre-em-ascens%25C3%25A3o-nicanor-rodrigues-filho-uq2zf" target="_blank" rel="noopener">
-          <span class="linkedin-icon"></span>
+        <a class="linkedin-link" href="https://www.linkedin.com/pulse/pilares-de-uma-carreira-sempre-em-ascens%25C3%25A3o-nicanor-rodrigues-filho-uq2zf" target="_blank" rel="noopener">
           Ler no LinkedIn
         </a>
-        <div>
+        <div class="article-summary">
+          Os 4 pilares que sustentam uma trajetória resiliente em qualquer mercado: repertório, rede, relevância e recorrência. Funciona como checklist prático para autoavaliação trimestral.
+        </div>
+        <div class="tags">
           <span class="tag">Framework</span>
           <span class="tag">Gestão de Carreira</span>
         </div>
-      </article>
+      </div>
 
       <!-- Artigo 5 -->
-      <article class="article-card">
-        <div>
+      <div class="article-item">
+        <div class="article-heading">
           <div class="article-title">O Fim do Emprego e a Ascensão do Estrategista de Carreira</div>
-          <div class="article-summary">
-            Argumenta que o modelo "emprego para vida toda" morreu — e quem sobrevive não é o mais "adaptable", mas o mais <em>estratégico</em>. O artigo descreve o perfil do <em>estrategista de carreira</em>: profissional que governa sua trajetória como se fosse um portfólio de investimentos.
-          </div>
         </div>
-        <a class="article-link" href="https://www.linkedin.com/pulse/o-fim-do-emprego-e-ascens%25C3%25A3o-estrategista-de-carreira-rodrigues-filho-xchvf" target="_blank" rel="noopener">
-          <span class="linkedin-icon"></span>
+        <a class="linkedin-link" href="https://www.linkedin.com/pulse/o-fim-do-emprego-e-ascens%25C3%25A3o-estrategista-de-carreira-rodrigues-filho-xchvf" target="_blank" rel="noopener">
           Ler no LinkedIn
         </a>
-        <div>
+        <div class="article-summary">
+          O modelo "emprego para vida toda" morreu. Quem sobrevive não é o mais "adaptable", mas o mais estratégico. O artigo descreve o perfil do estrategista de carreira: profissional que governa sua trajetória como um portfólio de investimentos.
+        </div>
+        <div class="tags">
           <span class="tag">Provocação</span>
           <span class="tag">Mercado de Trabalho</span>
         </div>
-      </article>
+      </div>
 
       <!-- Artigo 6 -->
-      <article class="article-card">
-        <div>
+      <div class="article-item">
+        <div class="article-heading">
           <div class="article-title">Segredo esfregado na cara que insistem em não perceber</div>
-          <div class="article-summary">
-            Um diagnóstico incômodo: o maior obstáculo à soberania não é o mercado, a idade ou a falta de dinheiro — é a <em>resistência psicológica</em> a enxergar o próprio valor. O artigo confronta as desculpas mais comuns que profissionais usam para adiar a mudança.
-          </div>
         </div>
-        <a class="article-link" href="https://www.linkedin.com/pulse/segredo-esfregado-na-cara-que-insistem-em-n%25C3%25A3o-nicanor-rodrigues-filho-y7wme" target="_blank" rel="noopener">
-          <span class="linkedin-icon"></span>
+        <a class="linkedin-link" href="https://www.linkedin.com/pulse/segredo-esfregado-na-cara-que-insistem-em-n%25C3%25A3o-nicanor-rodrigues-filho-y7wme" target="_blank" rel="noopener">
           Ler no LinkedIn
         </a>
-        <div>
+        <div class="article-summary">
+          O maior obstáculo à soberania não é o mercado, a idade ou a falta de dinheiro — é a resistência psicológica a enxergar o próprio valor. O artigo confronta as desculpas mais comuns que profissionais usam para adiar a mudança.
+        </div>
+        <div class="tags">
           <span class="tag">Mindset</span>
           <span class="tag">Autopercepção</span>
         </div>
-      </article>
+      </div>
 
-    </section>
+    </div>
 
-    <footer style="text-align:center; margin-top:3rem; color:var(--gray-700); font-size:0.95rem;">
-      <span>Curadoria Nicanor Rodrigues Filho · Método #AEstratégia</span>
-      <br>
-      <a href="https://nickanoras.github.io/nicanorrodriguesfilho/" style="color:var(--primary); text-decoration:none; margin-left:1rem;">← Voltar para a página principal</a>
+    <footer style="text-align:center; margin-top:3rem; margin-bottom:0.5rem;">
+      <a href="https://nickanoras.github.io/nicanorrodriguesfilho/" class="linkedin-link" style="color:var(--primary); text-decoration:none; font-size:1rem; padding-left:0; gap:0.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align:middle; display:inline-block; margin-right:0.25em;">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m0 2h.01" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="8" cy="8" r="2" fill="#2563eb"/>
+            <path d="M12 17v-5m0-2h4m-4 0h-4m0 5h4" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          ← Voltar para a página principal
+        </a>
     </footer>
   </div>
 </body>
