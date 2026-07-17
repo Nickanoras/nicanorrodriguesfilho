@@ -4,16 +4,30 @@ Allow: /
 # Sitemap
 Sitemap: https://nickanoras.github.io/nicanorrodriguesfilho/sitemap.xml
 
-# Regras para bots específicos
+# PERMITIR BOTS DE INTELIGÊNCIA ARTIFICIAL (Essencial para GEO/AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Regras para bots tradicionais
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
-# Bloquear bots de spam
+# Bloquear bots de spam / scrapers agressivos
 User-agent: MJ12bot
 Disallow: /
 
