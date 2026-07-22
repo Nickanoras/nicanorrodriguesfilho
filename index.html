@@ -749,32 +749,7 @@
         </div>
       </div>
     </section>
-
-    <!-- 1. Formulário que envia os dados para um serviço externo -->
-    <!-- Substitua a URL da action pelo endpoint do seu Formspree -->
-    <form action="https://formspree.io/f/maqrdbdo" method="POST" id="meuFormulario">
-        <label for="email">Seu melhor e-mail:</label>
-        <input type="email" id="email" name="email" required placeholder="nicanorf@gmail.com">
-        
-        <!-- Campo oculto para registrar um assunto amigável no e-mail recebido -->
-        <input type="hidden" name="_subject" value="Novo Lead - Solicitação de PDF">
-
-        <!-- Botão de envio -->
-        <button type="submit" id="btnEnviar">Enviar e receber PDF</button>
-    </form>
-
-    <!-- 2. Script para redirecionar o usuário para o PDF após o envio -->
-    <script>
-        const formulario = document.getElementById('meuFormulario');
-        
-        formulario.addEventListener('submit', function(e) {
-            // Aguarda o envio do form e redireciona para o PDF hospedado
-            setTimeout(function() {
-                window.location.href = '/estrategiapdf.pdf';
-            }, 1000);
-        });
-    </script>
-
+    
     <!-- CONTATO -->
     <section id="contato" aria-labelledby="contato-title">
       <div class="section-inner">
