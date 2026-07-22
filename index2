@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO BÁSICO -->
+    <title>Nicanor Rodrigues Filho | Mentor de Carreira e Vida em [Sua Cidade/Estado]</title>
+    <meta name="description" content="Nicanor Rodrigues Filho oferece mentoria estratégica de carreira e vida. Desenvolva seu potencial máximo com suporte personalizado.">
+    <meta name="keywords" content="Mentoria de Carreira, Nicanor Rodrigues Filho, Mentor de Vida, Desenvolvimento Pessoal, [Sua Cidade]">
+    <link rel="canonical" href="https://nickanoras.github.io/nicanorrodriguesfilho/">
+
+    <!-- AEO: Dados Estruturados (Para IAs entenderem quem você é) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nicanor Rodrigues Filho",
+      "url": "https://nickanoras.github.io/nicanorrodriguesfilho/",
+      "jobTitle": "Mentor de Carreira e Vida",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "[Sua Cidade]",
+        "addressRegion": "[Seu Estado]",
+        "addressCountry": "BR"
+      },
+      "description": "Especialista em mentoria de carreira e desenvolvimento humano.",
+      "sameAs": [
+        "https://www.linkedin.com/in/SEU-LINKEDIN",
+        "https://www.instagram.com/SEU-INSTAGRAM"
+      ]
+    }
+    </script>
+
+    <!-- ESTILOS DOS BOTÕES E LAYOUT -->
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* Cor do seu tema */
+            --accent-color: #27ae60;  /* Cor para botões de ação */
+            --text-light: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        /* Estilo dos Botões de Comando */
+        .btn-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary:hover {
+            background-color: #219150;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Botão Flutuante WhatsApp (GEO/Conversão) */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        /* Seção FAQ (Otimização para AEO/Respostas IA) */
+        .faq-section {
+            padding: 50px 20px;
+            background: #f9f9f9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO / HERO -->
+    <header style="text-align: center; padding: 50px 20px;">
+        <h1>Nicanor Rodrigues Filho</h1>
+        <p>Mentor de Carreira e Vida | Especialista em Desenvolvimento Humano</p>
+        
+        <!-- BOTÕES DE COMANDO REFEITOS -->
+        <div class="btn-container">
+            <a href="#contato" class="btn-primary">Agendar Mentoria Gratuita</a>
+            <a href="seu-curriculo.pdf" target="_blank" class="btn-secondary">Ver Trajetória (PDF)</a>
+        </div>
+    </header>
+
+    <!-- SEÇÃO DE FAQ (AEO - Muito importante para busca de voz e IA) -->
+    <section class="faq-section">
+        <h2 style="text-align: center;">Perguntas Frequentes sobre Mentoria</h2>
+        <details>
+            <summary>Como funciona a mentoria de carreira?</summary>
+            <p>A mentoria de carreira com Nicanor Rodrigues Filho é um processo personalizado focado em identificar seus pontos fortes, superar bloqueios e traçar um plano de ação estratégico para seu crescimento profissional.</p>
+        </details>
+        <details>
+            <summary>As sessões de mentoria são online ou presenciais?</summary>
+            <p>Atendo clientes de forma online para todo o Brasil e presencialmente na região de [Sua Cidade/Estado], garantindo flexibilidade e resultados.</p>
+        </details>
+    </section>
+
+    <!-- RODAPÉ (GEO - Reforça sua localização) -->
+    <footer style="text-align: center; padding: 30px; background: #2c3e50; color: white;">
+        <p>&copy; 2024 Nicanor Rodrigues Filho - Atendimento em [Sua Cidade/Estado] e Online.</p>
+        <p>Siga-me nas redes sociais profissionais.</p>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/55SEUTELEFONE" class="whatsapp-float" target="_blank">
+        <span style="font-family: Arial, sans-serif;">WP</span> 
+        <!-- Dica: Substitua o "WP" acima por um ícone (ex: Font Awesome) se preferir -->
+    </a>
+
+</body>
+</html>
