@@ -12,7 +12,19 @@
   <url>
     <loc>https://nickanoras.github.io/nicanorrodriguesfilho/soberania</loc>
     <lastmod>2026-07-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nickanoras.github.io/nicanorrodriguesfilho/index1.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://nickanoras.github.io/nicanorrodriguesfilho/index2.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
 </urlset>
